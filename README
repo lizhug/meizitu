@@ -19,3 +19,4 @@ scrapy crawl meizi
 1. user-agent pool
 2. ip pool
 3. category for images
+4. distributed
