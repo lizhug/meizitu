@@ -14,7 +14,7 @@ class MeiziSpider(scrapy.Spider):
     start_urls = []
 
     ### 页码1 到 5000   可自行调整
-    for i in range(1,3):
+    for i in range(1,6000):
         start_urls.append("http://www.meizitu.com/a/%d.html" % i)
 
     def parse(self, response):
