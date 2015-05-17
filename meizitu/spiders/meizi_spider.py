@@ -14,7 +14,7 @@ class MeiziSpider(scrapy.Spider):
     start_urls = []
 
     ### 页码1 到 5000   可自行调整
-    for i in range(400,401):
+    for i in range(1,3):
         start_urls.append("http://www.meizitu.com/a/%d.html" % i)
 
     def parse(self, response):
@@ -23,9 +23,9 @@ class MeiziSpider(scrapy.Spider):
             imageUrl = sel.xpath("@src").extract()
 
             m = hashlib.md5()
-            m.update(imageUrl[0])
+            m.update(imageUrl[0])       #python的md5 hash真他妈折腾 直接 hashlib.md5(string) 不好么
             filename = m.hexdigest() + ".jpg"
             dist = os.path.join(savePath, filename) 
 
-            urllib.urlretrieve(imageUrl[0], dist, None)
+            urllib.urlretrieve(imageUrl[0], dist, None)     #download images
             

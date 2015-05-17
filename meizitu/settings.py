@@ -12,8 +12,8 @@ BOT_NAME = 'meizitu'
 
 SPIDER_MODULES = ['meizitu.spiders']
 NEWSPIDER_MODULE = 'meizitu.spiders'
-IMAGES_STORE = 'image/'
+IMAGES_STORE = '../image/'
 ITEM_PIPELINES = {'scrapy.contrib.pipeline.images.ImagesPipeline': 1}
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
-#COOKIES_ENABLES=False
+USER_AGENT = 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36'
+COOKIES_ENABLES=False
